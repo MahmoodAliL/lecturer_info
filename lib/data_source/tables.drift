@@ -1,0 +1,21 @@
+CREATE TABLE lecturer (
+    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    full_name TEXT NOT NULL,
+    scientific_rank TEXT NOT NULL,
+    major_specialization TEXT NOT NULL,
+    minor_specialization TEXT NOT NULL,
+    work_place TEXT NOT NULL,
+    phone_number TEXT NOT NULL,
+    email TEXT NOT NULL
+);
+
+
+getlecturer: 
+SELECT * FROM lecturer WHERE lecturer.id = :id;
+
+
+watchlecturer: 
+SELECT * FROM lecturer WHERE lecturer.full_name LIKE :search;
+
+deleteLecturer: 
+DELETE FROM lecturer WHERE lecturer.id = :id;
